@@ -50,3 +50,9 @@ modules.order
 Module.symvers
 Mkfile.old
 dkms.conf
+
+# Ignore VS Code settings folder
+.vscode/
+
+# Ignore this .gitignore file itself (optional)
+.gitignore
