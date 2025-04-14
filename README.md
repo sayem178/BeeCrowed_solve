@@ -23,3 +23,24 @@ I want to share my solutions and thought process to **help others learn, debug, 
 ## Let’s Learn & Grow Together! 🚀
 If you're also solving Beecrowd problems, feel free to contribute, discuss, or ask for help! Let’s improve together. 💪
 
+# 🧠 BeeCrowed Solve Repo
+
+This repository contains my solutions to problems from [Beecrowd](https://www.beecrowd.com.br/), written in C.
+
+---
+
+## 📁 Structure
+
+- All `.c` files are problem solutions.
+- All compiled output goes into the `bin/` folder (not tracked on GitHub).
+- File names follow the problem ID and title format:  
+  `1158-Sum-of-Odd-Numbers.c`
+
+---
+
+## 🛠️ How to Compile
+
+Just clone the repo and run:
+
+```bash
+make
