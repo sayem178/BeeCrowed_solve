@@ -1,0 +1,18 @@
+# Ignore all compiled output files
+*.out
+1*
+
+# Ignore your custom build directory (if you ever use one)
+build/
+
+# Ignore object files or temp files if they ever appear
+*.o
+*.exe
+*.class
+
+# Ignore backup or swap files
+*~
+*.swp
+*.tmp
+
+
