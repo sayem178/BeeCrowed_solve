@@ -1,18 +1,27 @@
-# Ignore all compiled output files
+# Ignore compiled files and build outputs
 *.out
-1*
-
-# Ignore your custom build directory (if you ever use one)
-build/
-
-# Ignore object files or temp files if they ever appear
 *.o
 *.exe
 *.class
+build/
 
-# Ignore backup or swap files
+# Ignore temporary/backup files
 *~
 *.swp
 *.tmp
 
+# Ignore numeric-only files (like 1067, 1052, etc.)
+[0-9][0-9][0-9]
+[0-9][0-9][0-9][0-9]
 
+# Optional: VSCode settings (if you want)
+.vscode/
+
+# Optional: MacOS system files (if you ever see them)
+.DS_Store
+
+# Optional: Linux trash files
+.Trash-*
+
+# Optional: Thumbnails or cache folders
+.cache/
