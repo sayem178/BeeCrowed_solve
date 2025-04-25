@@ -15,8 +15,7 @@ build/
 [0-9][0-9][0-9][0-9]
 
 # Optional: VSCode settings (if you want)
-.vscode/
-
+bin/
 # Optional: MacOS system files (if you ever see them)
 .DS_Store
 

@@ -1,16 +1,26 @@
 CC = gcc
-SRC = $(wildcard *.c)
-OUT_DIR = bin
-OUT = $(patsubst %.c, $(OUT_DIR)/%, $(SRC))
+CFLAGS = -g -Wall
+BIN_DIR = bin
 
-$(OUT_DIR)/%: %.c
-	@mkdir -p $(OUT_DIR)
-	$(CC) $< -o $@
-	@echo "Compiled $< -> $@"
+# All source files
+SRCS = $(wildcard *.c)
+# All binaries in bin/
+BINS = $(patsubst %.c, $(BIN_DIR)/%, $(SRCS))
 
-all: $(OUT)
-	@echo "✅ All files compiled!"
+TARGET ?= main
+
+all: $(BIN_DIR) $(BINS)
+
+$(BIN_DIR):
+	mkdir -p $(BIN_DIR)
+
+# Build single target
+$(BIN_DIR)/$(TARGET): $(TARGET).c | $(BIN_DIR)
+	$(CC) $(CFLAGS) $< -o $@ -lm
+
+# Build all sources
+$(BIN_DIR)/%: %.c | $(BIN_DIR)
+	$(CC) $(CFLAGS) $< -o $@ -lm
 
 clean:
-	rm -rf $(OUT_DIR)
-	@echo "🧹 Cleaned up compiled files!"
+	rm -rf $(BIN_DIR)
